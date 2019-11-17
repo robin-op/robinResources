@@ -1,72 +1,50 @@
- {% load static %}
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-
-    <link rel="stylesheet" href="{% static 'css/Portada.css' %}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+    <link rel="stylesheet" href="css/Portada.css" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-    <script src="{% static 'js/jquery.flexslider.js' %}"></script>
+    <script src="js/jquery.flexslider.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <script src="{% static 'js/modernizr.js' %}"></script>
-    <script src="{% static 'js/jquery-2.2.4-min.js'%}"></script>
+    <script src="js/script.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/jquery-2.2.4-min.js"></script>
 
-
-
+    <script src="js/main-v1.1.js"></script>
 
     </script>
     <title>La Biblioteca de Robin</title>
 </head>
 
-
-<title>Document</title>
-</head>
 <header>
-    <div>
-        <a>
-            <h1 href="{% url 'blog:home' %}" class="Encabezado">Robin Resources</h1>
-        </a>
-    </div>
-
+    <h1 class="Encabezado">Robin Resources</h1>
     <div id="cd-nav" class="">
         <a href="#0" class="cd-nav-trigger">Menu<span></span></a>
+
         <nav id="cd-main-nav">
-            {% if user.is_authenticated %}
             <ul class="">
-                <li><a href="{% url 'blog:personajes' %}">Lista de Personajes</a></li>
+                <li><a href="ListaPersonajes.html">Lista de Personajes</a></li>
                 <li><a href="TierList.html">Tier List</a></li>
                 <li><a href="Glosario.html">Glosario</a></li>
-                <li><a href="{% url 'accounts:signup' %}">REGÍSTRATE</a></li>
-                <li><a href="{% url 'accounts:login' %}">INICIAR SESION</a></li>
-
-
 
             </ul>
-            {% else %}
-            <ul class="">
-                <li><a href="{% url 'blog:personajes' %}">Lista de Personajes</a></li>
-                <li><a href="TierList.html">Tier List</a></li>
-                <li><a href="Glosario.html">Glosario</a></li>
-                <li><a href="userPj.html">Tus Personajes</a></li>
-
-
-            </ul>
-            {% endif %}
-
         </nav>
-        <div class="social-bar">
-            <a href="https://discord.gg/yKGC4zD" class="fab fa-discord" target="_blank"></a>
-            <a href="https://mail.google.com/mail/u/0/?tab=im#inbox?compose=DmwnWstqxHDbTxRcgMKbsdhlPkXltWxtxTTQgHqVRccSFZMzTGwzqhVkfkXQGqDNfjTfqWtwghmL" class="fab fa-google-plus-g" target="_blank"></a>
-            <a href="https://www.twitter.com/" class="fab fa-twitter" target="_blank"></a>
-        </div>
     </div>
 
+    <div class="social-bar">
+        <a href="https://discord.gg/yKGC4zD" class="fab fa-discord" target="_blank"></a>
+        <a href="https://mail.google.com/mail/u/0/?tab=im#inbox?compose=DmwnWstqxHDbTxRcgMKbsdhlPkXltWxtxTTQgHqVRccSFZMzTGwzqhVkfkXQGqDNfjTfqWtwghmL" class="fab fa-google-plus-g" target="_blank"></a>
+        <a href="https://www.twitter.com/" class="fab fa-twitter" target="_blank"></a>
+    </div>
+
+
+    </div>
 </header>
 
 <body>
@@ -79,21 +57,20 @@
                 <li data-target="#my-slider" data-slide-to="1"></li>
             </ol>
 
-
             <!--Contenido del Slider -->
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
-                    <a href="Imagenes/chrom.jpg"><img class="Portrait" src="{% static 'Imagenes/marth.jpg' %}"></a>
+                    <a href="Imagenes/chrom.jpg"><img class="Portrait" src="Personajes/imgPj/marth.jpg"></a>
                     <div class="carousel-caption centrarImagen">
-                        <a href="{% url 'personajes:marth' %}">
+                        <a href="Personajes/Marth.html">
                             <h1 href="/Internet">Marth</h1>
                         </a>
                     </div>
                 </div>
                 <div class="item">
-                    <img class="Portrait" src="{% static 'Imagenes/ike.jpg' %}">
+                    <img class="Portrait" src="Personajes/imgPj/ike.jpg">
                     <div class="carousel-caption">
-                        <a href="{% url 'personajes:ike' %}">
+                        <a href="Personajes/Ike.html">
                             <h1 href="/Internet">Ike</h1>
                         </a>
                     </div>
@@ -118,26 +95,25 @@
                 <div class="box-text">
                     Bienvenido
                 </div>
-                <img src="{% static 'Imagenes/chibi.jpeg' %}"> "Hola Soy Robin y te doy la bienvenida a mi biblioteca con informacion util "
+                <img src="Imagenes/chibi.jpeg"> "Hola Soy Robin y te doy la bienvenida a mi biblioteca con informacion util "
             </div>
         </div>
         <div class="col-xs-12 col-lg-6">
             <div class="box-prom2">
                 <div class="box-text">
-                    <a>Aprenderas</a>
+                    <a>VALORACIONES</a>
                 </div>
-                A ser mejor en el juegito de smash ultimate donde yo tambien participo :3
             </div>
         </div>
     </div>
-    --
-    <footer>
-        <div id="footer-d" class="row start-lg middle-lg center-xs">
-            <div class="col-xs-12 col-lg-12">
-                <h1 class="Pie">Robin Resources</h1>
-            </div>
-        </div>
-    </footer>
 </body>
+--------------------------------------------------------------------
+<footer>
+    <div id="footer-d" class="row start-lg middle-lg center-xs">
+        <div class="col-xs-12 col-lg-12">
+            <h1 class="Pie">Robin Resources</h1>
+        </div>
+    </div>
+</footer>
 
 </html>

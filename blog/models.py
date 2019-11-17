@@ -22,7 +22,7 @@ class Post(models.Model):
     
     class Meta:
         permissions = (
-            ('profesor',_('Es profesor')),
-            ('alumno',_('Es alumno')),
+            ('admin',_('Es administrador')),
+            ('usuario',_('Es usuario')),
         )
 
