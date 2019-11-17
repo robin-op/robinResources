@@ -10,6 +10,6 @@ urlpatterns = [
     url('admin/', admin.site.urls),
     url('', include('blog.urls')),
     url(r'personajes/', include('personajes.urls')),
-    url(r'cuentas/', include('accounts.urls')),
+    url(r'accounts/', include('accounts.urls')),
 
 ]
