@@ -42,7 +42,9 @@
                 <li><a href="{% url 'blog:personajes' %}">Lista de Personajes</a></li>
                 <li><a href="TierList.html">Tier List</a></li>
                 <li><a href="Glosario.html">Glosario</a></li>
-                <li><a href="userPj.html">Tus Personajes</a></li>
+                <li><a href="{% url 'accounts:signup' %}">REGÍSTRATE</a></li>
+                <li><a href="{% url 'accounts:login' %}">INICIAR SESION</a></li>
+
 
 
             </ul>
@@ -51,13 +53,18 @@
                 <li><a href="{% url 'blog:personajes' %}">Lista de Personajes</a></li>
                 <li><a href="TierList.html">Tier List</a></li>
                 <li><a href="Glosario.html">Glosario</a></li>
-                <li><a href="{% url 'accounts:signup' %}">REGÍSTRATE</a></li>
+                <li><a href="userPj.html">Tus Personajes</a></li>
 
 
             </ul>
             {% endif %}
 
         </nav>
+        <div class="social-bar">
+            <a href="https://discord.gg/yKGC4zD" class="fab fa-discord" target="_blank"></a>
+            <a href="https://mail.google.com/mail/u/0/?tab=im#inbox?compose=DmwnWstqxHDbTxRcgMKbsdhlPkXltWxtxTTQgHqVRccSFZMzTGwzqhVkfkXQGqDNfjTfqWtwghmL" class="fab fa-google-plus-g" target="_blank"></a>
+            <a href="https://www.twitter.com/" class="fab fa-twitter" target="_blank"></a>
+        </div>
     </div>
 
 </header>
