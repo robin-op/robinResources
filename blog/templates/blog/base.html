@@ -1,0 +1,43 @@
+{% load static %}
+<html>
+<link rel="stylesheet" href="{% static 'css/Portada.css' %}">
+
+<body>
+    <div class="page-header">
+        <h1>
+            <a href="{% url 'blog:home' %}" class="Encabezado">Robin Resources</a>
+        </h1>
+    </div>
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-8">
+                <div id="cd-nav" class="">
+                    <a href="#0" class="cd-nav-trigger">Menu<span></span></a>
+                    <nav id="cd-main-nav">
+                        <ul class="">
+                            <li><a href="{% url 'blog:personajes' %}">Lista de Personajes</a></li>
+                            <li><a href="TierList.html">Tier List</a></li>
+                            <li><a href="Glosario.html">Glosario</a></li>
+
+
+
+                        </ul>
+
+                    </nav>
+                </div>
+                {% block content %} {% endblock %}
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div id="footer-d" class="row start-lg middle-lg center-xs">
+            <h2>Contacto</h2>
+            <ul class="Pie">
+                <li><span class="icon fa-phone"></span> <a href="#">(+56)977247688</a></li>
+                <li><span class="icon fa-envelope"></span> <a href="#">hans.arancibia@live.com</a></li>
+            </ul>
+        </div>
+
+    </footer>
+</body>
