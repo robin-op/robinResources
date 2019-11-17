@@ -6,7 +6,8 @@ from django.shortcuts import render, get_object_or_404
 from django.shortcuts import redirect
 
 # Create your views here.
-
+def link(request):
+    return render(request, 'personajes/link.html')
 def cloud(request):
     return render(request, 'personajes/Cloud.html')
 def corrin(request):

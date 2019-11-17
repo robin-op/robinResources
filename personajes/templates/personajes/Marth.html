@@ -1,35 +1,7 @@
-{% load static %}
-
-<html lang="en">
-
-<head>
-
-    <link rel="stylesheet" href="{% static 'style.css' %}">
-    <script src=" {% static 'script.js' %}"></script>
-    <script src=" {% static 'modernizr.js' %}"></script>
-    <script defer src=" {% static 'query-2.2.4-min.js' %}j"></script>
-    <script defer src=" {% static 'main-v1.1.js' %}"></script>
-    <title>FramesData</title>
-</head>
+{% extends 'personajes/base.html' %} {% load staticfiles %} {% block content %}
 
 <body>
     <h1 class="NombrePersonaje">Marth</h1>
-    <div id="cd-nav" class="">
-        <a href="#0" class="cd-nav-trigger">Menu<span></span></a>
-
-        <nav id="cd-main-nav">
-            <ul class="">
-                <li><a href="#Neutral">Jabs</a></li>
-                <li><a href="#aerialattacks">Aerial Attacks</a></li>
-                <li><a href="#specialattacks">Special Attacks</a></li>
-                <li><a href="#grabs">Grabs / Throws</a></li>
-                <li><a href="#dodges">Dodges / Rolls</a></li>
-                <li><a href="#misc">Misc Info</a></li>
-
-            </ul>
-        </nav>
-    </div>
-
 
     <a href="#0" class="cd-nav-trigger">Menu<span></span></a>
 
@@ -404,3 +376,4 @@
 </body>
 
 </html>
+{% endblock %}

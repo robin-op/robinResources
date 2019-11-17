@@ -1,48 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" title="foro" href="../css/style.css" />
-    <script src="../js/script.js"></script>
-    <script src="../js/modernizr.js"></script>
-    <script defer src="../js/jquery-2.2.4-min.js"></script>
-
-    <script defer src="../js/main-v1.1.js"></script>
-    <title>Portada</title>
-</head>
+{% extends 'personajes/base.html' %} {% load staticfiles %} {% block content %}
 
 <body>
-    <h1 class="NombrePersonaje">Suegro</h1>
-    <div id="cd-nav" class="">
-        <a href="#0" class="cd-nav-trigger">Menu<span></span></a>
-
-        <nav id="cd-main-nav">
-            <ul class="">
-                <li><a href="#Neutral">Normales</a></li>
-                <li><a href="#aerialattacks">Golpes Aereos</a></li>
-                <li><a href="#specialattacks">Habilidades</a></li>
-                <li><a href="#grabs">Agarres/Grabs</a></li>
-                <li><a href="#dodges">Esquivar/ Rolls</a></li>
-                <li><a href="#misc">Informacion extra</a></li>
-
-
-            </ul>
-        </nav>
-    </div>
+    <h1 class="NombrePersonaje">Chrom</h1>
 
 
     <a href="#0" class="cd-nav-trigger">Menu<span></span></a>
 
 
-    <img class="Portrait" alt="ImagenPersonaje" src="imgPj/chrom.jpg">
+    <img class="Portrait" alt="ImagenPersonaje" src="{% static 'imgPj/chrom.jpg' %}">
     <div class="Contenedor">
-        <h2 class="Categoria" id="Neutral">Normales</h2>
-        <div class="moves">
+        <h2 class="Categoria" id="Neutral">Jabs</h2>
 
-            <div class="movecontainer">
+        <div class="moves">
+            <div class="ContenedorMovimientos">
+
                 <div class="movename">
                     Jab
                 </div>
@@ -78,7 +49,8 @@
                 </div>
             </div>
 
-            <div class="movecontainer">
+            <div class="ContenedorMovimientos">
+
                 <div class="movename">
                     Forward Tilt
                 </div>
@@ -114,7 +86,10 @@
                 </div>
             </div>
 
-            <div class="movecontainer">
+            <div class="ContenedorMovimientos">
+                <div class="hitbox">
+                    <img data-src="hitboxes/chrom/ChromUTilt.gif" />
+                </div>
                 <div class="movename">
                     Up Tilt
                 </div>
@@ -150,7 +125,10 @@
                 </div>
             </div>
 
-            <div class="movecontainer">
+            <div class="ContenedorMovimientos">
+                <div class="hitbox">
+                    <img data-src="hitboxes/chrom/ChromDTilt.gif" />
+                </div>
                 <div class="movename">
                     Down Tilt
                 </div>
@@ -186,7 +164,10 @@
                 </div>
             </div>
 
-            <div class="movecontainer">
+            <div class="ContenedorMovimientos">
+                <div class="hitbox">
+                    <img data-src="hitboxes/chrom/ChromDashAttack.gif" />
+                </div>
                 <div class="movename">
                     Dash Attack
                 </div>
@@ -222,7 +203,10 @@
                 </div>
             </div>
 
-            <div class="movecontainer">
+            <div class="ContenedorMovimientos">
+                <div class="hitbox">
+                    <img data-src="hitboxes/chrom/ChromFSmash.gif" />
+                </div>
                 <div class="movename">
                     Forward Smash
                 </div>
@@ -258,7 +242,10 @@
                 </div>
             </div>
 
-            <div class="movecontainer">
+            <div class="ContenedorMovimientos">
+                <div class="hitbox">
+                    <img data-src="hitboxes/chrom/ChromUSmash.gif" />
+                </div>
                 <div class="movename">
                     Up Smash
                 </div>
@@ -294,7 +281,10 @@
                 </div>
             </div>
 
-            <div class="movecontainer">
+            <div class="ContenedorMovimientos">
+                <div class="hitbox">
+                    <img data-src="hitboxes/chrom/ChromDSmash.gif" />
+                </div>
                 <div class="movename">
                     Down Smash
                 </div>
@@ -332,12 +322,16 @@
 
         </div>
 
-        <h2 class="movecategory" id="aerialattacks">
-            Golpes Aereos </h2>
+        <h2 class="Categoria" id="aerialattacks">
+            Aerial Attacks
+        </h2>
 
         <div class="moves">
 
-            <div class="movecontainer">
+            <div class="ContenedorMovimientos">
+                <div class="hitbox">
+                    <img data-src="hitboxes/chrom/ChromNAir.gif" />
+                </div>
                 <div class="movename">
                     Neutral Air
                 </div>
@@ -373,7 +367,10 @@
                 </div>
             </div>
 
-            <div class="movecontainer">
+            <div class="ContenedorMovimientos">
+                <div class="hitbox">
+                    <img data-src="hitboxes/chrom/ChromFAir.gif" />
+                </div>
                 <div class="movename">
                     Forward Air
                 </div>
@@ -409,7 +406,10 @@
                 </div>
             </div>
 
-            <div class="movecontainer">
+            <div class="ContenedorMovimientos">
+                <div class="hitbox">
+                    <img data-src="hitboxes/chrom/ChromBAir.gif" />
+                </div>
                 <div class="movename">
                     Back Air
                 </div>
@@ -445,7 +445,10 @@
                 </div>
             </div>
 
-            <div class="movecontainer">
+            <div class="ContenedorMovimientos">
+                <div class="hitbox">
+                    <img data-src="hitboxes/chrom/ChromUAir.gif" />
+                </div>
                 <div class="movename">
                     Up Air
                 </div>
@@ -481,7 +484,10 @@
                 </div>
             </div>
 
-            <div class="movecontainer">
+            <div class="ContenedorMovimientos">
+                <div class="hitbox">
+                    <img data-src="hitboxes/chrom/ChromDAir.gif" />
+                </div>
                 <div class="movename">
                     Down Air
                 </div>
@@ -519,13 +525,16 @@
 
         </div>
 
-        <h2 class="movecategory" id="specialattacks">
-            Habilidades
+        <h2 class="Categoria" id="specialattacks">
+            Special Attacks
         </h2>
 
         <div class="moves">
 
-            <div class="movecontainer">
+            <div class="ContenedorMovimientos">
+                <div class="hitbox">
+                    <img data-src="hitboxes/chrom/ChromFlareBlade.gif" />
+                </div>
                 <div class="movename">
                     Neutral B (Flare Blade)
                 </div>
@@ -561,7 +570,10 @@
                 </div>
             </div>
 
-            <div class="movecontainer">
+            <div class="ContenedorMovimientos">
+                <div class="hitbox">
+                    <img data-src="hitboxes/chrom/ChromDoubleEdgedDance1.gif" />
+                </div>
                 <div class="movename">
                     Side B, Hit 1 (Double Edged Dance, Hit 1)
                 </div>
@@ -597,7 +609,10 @@
                 </div>
             </div>
 
-            <div class="movecontainer">
+            <div class="ContenedorMovimientos">
+                <div class="hitbox">
+                    <img data-src="hitboxes/chrom/ChromDoubleEdgedDance2.gif" />
+                </div>
                 <div class="movename">
                     Double Edged Dance, Hit 2 Neutral
                 </div>
@@ -633,7 +648,10 @@
                 </div>
             </div>
 
-            <div class="movecontainer">
+            <div class="ContenedorMovimientos">
+                <div class="hitbox">
+                    <img data-src="hitboxes/chrom/ChromDoubleEdgedDance3.gif" />
+                </div>
                 <div class="movename">
                     Double Edged Dance, Hit 3 Neutral
                 </div>
@@ -669,7 +687,10 @@
                 </div>
             </div>
 
-            <div class="movecontainer">
+            <div class="ContenedorMovimientos">
+                <div class="hitbox">
+                    <img data-src="hitboxes/chrom/ChromDoubleEdgedDance4.gif" />
+                </div>
                 <div class="movename">
                     Double Edged Dance, Hit 4 Neutral
                 </div>
@@ -705,7 +726,10 @@
                 </div>
             </div>
 
-            <div class="movecontainer">
+            <div class="ContenedorMovimientos">
+                <div class="hitbox">
+                    <img data-src="hitboxes/chrom/ChromDoubleEdgedDance2Up.gif" />
+                </div>
                 <div class="movename">
                     Double Edged Dance, Hit 2 Up
                 </div>
@@ -741,7 +765,10 @@
                 </div>
             </div>
 
-            <div class="movecontainer">
+            <div class="ContenedorMovimientos">
+                <div class="hitbox">
+                    <img data-src="hitboxes/chrom/ChromDoubleEdgedDance3Up.gif" />
+                </div>
                 <div class="movename">
                     Double Edged Dance, Hit 3 Up
                 </div>
@@ -777,7 +804,10 @@
                 </div>
             </div>
 
-            <div class="movecontainer">
+            <div class="ContenedorMovimientos">
+                <div class="hitbox">
+                    <img data-src="hitboxes/chrom/ChromDoubleEdgedDance4Up.gif" />
+                </div>
                 <div class="movename">
                     Double Edged Dance, Hit 4 Up
                 </div>
@@ -813,7 +843,10 @@
                 </div>
             </div>
 
-            <div class="movecontainer">
+            <div class="ContenedorMovimientos">
+                <div class="hitbox">
+                    <img data-src="hitboxes/chrom/ChromDoubleEdgedDance3Down.gif" />
+                </div>
                 <div class="movename">
                     Double Edged Dance, Hit 3 Down
                 </div>
@@ -849,7 +882,10 @@
                 </div>
             </div>
 
-            <div class="movecontainer">
+            <div class="ContenedorMovimientos">
+                <div class="hitbox">
+                    <img data-src="hitboxes/chrom/ChromDoubleEdgedDance4Down.gif" />
+                </div>
                 <div class="movename">
                     Double Edged Dance, Hit 4 Down
                 </div>
@@ -885,7 +921,12 @@
                 </div>
             </div>
 
-            <div class="movecontainer">
+            <div class="ContenedorMovimientos">
+                <div class="hitbox">
+                    Rising<img data-src="hitboxes/chrom/ChromSoaringSlash.gif" /> Falling
+                    <img data-src="hitboxes/chrom/ChromSoaringSlashDescent.gif" /> Landing
+                    <img data-src="hitboxes/chrom/ChromSoaringSlashLanding.gif" />
+                </div>
                 <div class="movename">
                     Up B (Soaring Slash)
                 </div>
@@ -922,7 +963,10 @@
             </div>
 
 
-            <div class="movecontainer">
+            <div class="ContenedorMovimientos">
+                <div class="hitbox">
+                    <img data-src="hitboxes/chrom/ChromCounter.gif" />
+                </div>
                 <div class="movename">
                     Down B (Counter)
                 </div>
@@ -958,7 +1002,10 @@
                 </div>
             </div>
 
-            <div class="movecontainer">
+            <div class="ContenedorMovimientos">
+                <div class="hitbox">
+                    <img data-src="hitboxes/chrom/ChromCounterHit.gif" />
+                </div>
                 <div class="movename">
                     Counter, Attack
                 </div>
@@ -996,13 +1043,16 @@
 
         </div>
 
-        <h2 class="movecategory" id="grabs">
-            Grabs / Agarres
+        <h2 class="Categoria" id="grabs">
+            Grabs / Throws
         </h2>
 
         <div class="moves">
 
-            <div class="movecontainer">
+            <div class="ContenedorMovimientos">
+                <div class="hitbox">
+                    <img data-src="hitboxes/chrom/CHromGrab.gif" />
+                </div>
                 <div class="movename">
                     Grab
                 </div>
@@ -1023,7 +1073,10 @@
                 </div>
             </div>
 
-            <div class="movecontainer">
+            <div class="ContenedorMovimientos">
+                <div class="hitbox">
+                    <img data-src="hitboxes/chrom/ChromDashGrab.gif" />
+                </div>
                 <div class="movename">
                     Dash Grab
                 </div>
@@ -1044,7 +1097,10 @@
                 </div>
             </div>
 
-            <div class="movecontainer">
+            <div class="ContenedorMovimientos">
+                <div class="hitbox">
+                    <img data-src="hitboxes/chrom/ChromPivotGrab.gif" />
+                </div>
                 <div class="movename">
                     Pivot Grab
                 </div>
@@ -1065,7 +1121,10 @@
                 </div>
             </div>
 
-            <div class="movecontainer">
+            <div class="ContenedorMovimientos">
+                <div class="hitbox">
+                    <img data-src="hitboxes/chrom/ChromPummel.gif" />
+                </div>
                 <div class="movename">
                     Pummel
                 </div>
@@ -1086,7 +1145,10 @@
                 </div>
             </div>
 
-            <div class="movecontainer">
+            <div class="ContenedorMovimientos">
+                <div class="hitbox">
+                    <img data-src="hitboxes/chrom/ChromFThrow.gif" />
+                </div>
                 <div class="movename">
                     Forward Throw
                 </div>
@@ -1107,7 +1169,10 @@
                 </div>
             </div>
 
-            <div class="movecontainer">
+            <div class="ContenedorMovimientos">
+                <div class="hitbox">
+                    <img data-src="hitboxes/chrom/ChromBThrow.gif" />
+                </div>
                 <div class="movename">
                     Backward Throw
                 </div>
@@ -1128,7 +1193,10 @@
                 </div>
             </div>
 
-            <div class="movecontainer">
+            <div class="ContenedorMovimientos">
+                <div class="hitbox">
+                    <img data-src="hitboxes/chrom/ChromUThrow.gif" />
+                </div>
                 <div class="movename">
                     Up Throw
                 </div>
@@ -1149,7 +1217,10 @@
                 </div>
             </div>
 
-            <div class="movecontainer">
+            <div class="ContenedorMovimientos">
+                <div class="hitbox">
+                    <img data-src="hitboxes/chrom/ChromDThrow.gif" />
+                </div>
                 <div class="movename">
                     Down Throw
                 </div>
@@ -1172,13 +1243,13 @@
 
         </div>
 
-        <h2 class="movecategory" id="dodges">
-            Esquivar/ Rolls
+        <h2 class="Categoria" id="dodges">
+            Dodges / Rolls
         </h2>
 
         <div class="moves">
 
-            <div class="movecontainer">
+            <div class="ContenedorMovimientos">
                 <div class="movename">
                     Spot Dodge
                 </div>
@@ -1193,7 +1264,7 @@
                 </div>
             </div>
 
-            <div class="movecontainer">
+            <div class="ContenedorMovimientos">
                 <div class="movename">
                     Forward Roll
                 </div>
@@ -1208,7 +1279,7 @@
                 </div>
             </div>
 
-            <div class="movecontainer">
+            <div class="ContenedorMovimientos">
                 <div class="movename">
                     Backward Roll
                 </div>
@@ -1223,7 +1294,7 @@
                 </div>
             </div>
 
-            <div class="movecontainer">
+            <div class="ContenedorMovimientos">
                 <div class="movename">
                     Neutral Air Dodge
                 </div>
@@ -1238,7 +1309,7 @@
                 </div>
             </div>
 
-            <div class="movecontainer">
+            <div class="ContenedorMovimientos">
                 <div class="movename">
                     Air Dodge, Down
                 </div>
@@ -1253,7 +1324,7 @@
                 </div>
             </div>
 
-            <div class="movecontainer">
+            <div class="ContenedorMovimientos">
                 <div class="movename">
                     Air Dodge, Diagonally Down
                 </div>
@@ -1268,7 +1339,7 @@
                 </div>
             </div>
 
-            <div class="movecontainer">
+            <div class="ContenedorMovimientos">
                 <div class="movename">
                     Air Dodge, Left/Right
                 </div>
@@ -1283,7 +1354,7 @@
                 </div>
             </div>
 
-            <div class="movecontainer">
+            <div class="ContenedorMovimientos">
                 <div class="movename">
                     Air Dodge, Diagonally Up
                 </div>
@@ -1298,7 +1369,7 @@
                 </div>
             </div>
 
-            <div class="movecontainer">
+            <div class="ContenedorMovimientos">
                 <div class="movename">
                     Air Dodge, Up
                 </div>
@@ -1314,7 +1385,9 @@
             </div>
 
         </div>
+
     </div>
 </body>
 
 </html>
+{% endblock %}

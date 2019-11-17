@@ -1,8 +1,5 @@
-<html>
-<link rel="stylesheet" href="{% static 'css/Portada.css' %}">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
+{% load staticfiles %}
+
 <link rel="stylesheet" href="{% static 'style.css' %}">
 <script src=" {% static 'script.js' %}"></script>
 <script src=" {% static 'modernizr.js' %}"></script>
@@ -10,10 +7,25 @@
 <script defer src=" {% static 'main-v1.1.js' %}"></script>
 
 <body>
-    <div class="page-header">
-        <h1>
-            <a href="{% url 'blog:home' %}" class="Encabezado">Robin Resources</a>
-        </h1>
+
+    <div id="cd-nav" class="">
+        <a href="#0" class="cd-nav-trigger">Menu<span></span></a>
+
+        <nav id="cd-main-nav">
+            <ul class="">
+                <li><a href="#Neutral">Jabs</a></li>
+                <li><a href="#aerialattacks">Aerial Attacks</a></li>
+                <li><a href="#specialattacks">Special Attacks</a></li>
+                <li><a href="#grabs">Grabs / Throws</a></li>
+                <li><a href="#dodges">Dodges / Rolls</a></li>
+                <li><a href="{% url 'blog:personajes' %}">Lista de Personajes</a></li>
+
+            </ul>
+        </nav>
+    </div>
+
+
+    <a href="#0" class="cd-nav-trigger">Menu<span></span></a>
     </div>
     <div class="content container">
         <div class="row">
