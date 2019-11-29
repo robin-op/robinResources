@@ -5,16 +5,16 @@ from django.core.exceptions import ValidationError
 
 
 class CustomUserCreationForm(forms.Form):
-    username = forms.CharField(label='Enter Username', min_length=4, max_length=150)
-    email = forms.EmailField(label='Enter email')
-    password1 = forms.CharField(label='Enter password', widget=forms.PasswordInput)
-    password2 = forms.CharField(label='Confirm password', widget=forms.PasswordInput)
+    username = forms.CharField(label='Ingrese nombre de usuario', min_length=4, max_length=150)
+    email = forms.EmailField(label='Ingrese email')
+    password1 = forms.CharField(label='Ingrese password', widget=forms.PasswordInput)
+    password2 = forms.CharField(label='Confirme password', widget=forms.PasswordInput)
 
     def clean_username(self):
         username = self.cleaned_data['username'].lower()
         r = User.objects.filter(username=username)
         if r.count():
-            raise  ValidationError("Username already exists")
+            raise  ValidationError("Nombre de usuario ya existes")
         return username
 
     def clean_email(self):

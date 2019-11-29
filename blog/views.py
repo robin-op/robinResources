@@ -4,16 +4,33 @@ from django.views import generic
 from .models import Post
 from django.shortcuts import render, get_object_or_404
 from .forms import PostForm
-from django.shortcuts import redirect
+from django.contrib.auth import login, authenticate
+from django.contrib.auth.forms import UserCreationForm
+from django.shortcuts import render, redirect
+from .forms import SignUpForm
 
 
 # Create your views here.
+def signup(request):
+    if request.method == 'POST':
+        form = SignUpForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            user.refresh_from_db()  # load the profile instance created by the signal
+            user.profile.birth_date = form.cleaned_data.get('birth_date')
+            user.save()
+            raw_password = form.cleaned_data.get('password1')
+            user = authenticate(username=user.username, password=raw_password)
+            login(request, user)
+            return redirect('home')
+    else:
+        form = SignUpForm()
+    return render(request, 'signup.html', {'form': form})
 def main(request):
     return render(request, 'blog/Index.html')
 def listaPersonajes (request):
     return render(request, 'blog/ListaPersonajes.html')
-def signup (request):
-    return render(request, 'blog/signup.html')
+
 
 def post_list(request):
     user = request.user
