@@ -9,6 +9,8 @@ urlpatterns = [
     url(r'^$', views.main,name='home'),
     url(r'^listaPersonajes$', views.listaPersonajes,name='personajes'),
     url(r'^signup$', views.signup,name='signup'),
+    url(r'^tierList$', views.tierlist,name='tierlist'),
+
 
 
 

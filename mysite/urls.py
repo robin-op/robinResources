@@ -13,4 +13,6 @@ urlpatterns = [
     url(r'personajes/', include('personajes.urls')),
     url(r'accounts/', include('accounts.urls')),
 
+
+
 ]
