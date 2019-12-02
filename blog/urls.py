@@ -11,7 +11,4 @@ urlpatterns = [
     url(r'^signup$', views.signup,name='signup'),
     url(r'^tierList$', views.tierlist,name='tierlist'),
 
-
-
-
 ]
