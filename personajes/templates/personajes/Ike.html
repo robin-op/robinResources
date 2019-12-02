@@ -1,3 +1,4 @@
+<<<<<<< HEAD:personajes/templates/personajes/Ike.html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,11 +33,22 @@
         </nav>
     </div>
 
+=======
+{% extends 'personajes/base.html' %} {% load staticfiles %} {% block content %}
+
+
+<body>
+    <h1 class="NombrePersonaje">Ike</h1>
+>>>>>>> master:Personajes/Ike.html
 
     <a href="#0" class="cd-nav-trigger">Menu<span></span></a>
 
 
+<<<<<<< HEAD:personajes/templates/personajes/Ike.html
     <img class="Portrait" alt="ImagenPersonaje" src="imgPj\ike.jpg">
+=======
+    <img class="Portrait" alt="ImagenPersonaje" src="{% static 'imgPj/ike.jpg' %}">
+>>>>>>> master:Personajes/Ike.html
     <div class="Contenedor">
         <h2 class="Categoria" id="Neutral">Jabs</h2>
         <div class="moves">
@@ -405,4 +417,8 @@
     </div>
 </body>
 
+<<<<<<< HEAD:personajes/templates/personajes/Ike.html
 </html>
+=======
+</html>{% endblock %}
+>>>>>>> master:Personajes/Ike.html

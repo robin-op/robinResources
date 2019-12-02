@@ -1,9 +1,25 @@
 {% load static %}
+<<<<<<< HEAD
 <html>
 <link rel="stylesheet" href="{% static 'css/Portada.css' %}">
 
 <body>
     <div class="page-header">
+=======
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="{% static 'js/jquery.flexslider.js' %}"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="{% static 'css/Portada.css' %}">
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="{% static 'js/modernizr.js' %}"></script>
+<script src="{% static 'js/jquery-2.2.4-min.js'%}"></script>
+
+<body>
+    <div class="Encabezado">
+>>>>>>> master
         <h1>
             <a href="{% url 'blog:home' %}" class="Encabezado">Robin Resources</a>
         </h1>
@@ -14,6 +30,7 @@
                 <div id="cd-nav" class="">
                     <a href="#0" class="cd-nav-trigger">Menu<span></span></a>
                     <nav id="cd-main-nav">
+<<<<<<< HEAD
                         <ul class="">
                             <li><a href="{% url 'blog:personajes' %}">Lista de Personajes</a></li>
                             <li><a href="TierList.html">Tier List</a></li>
@@ -35,6 +52,47 @@
             <h2>Contacto</h2>
             <ul class="Pie">
                 <li><span class="icon fa-phone"></span> <a href="#">(+56)977247688</a></li>
+=======
+                            {% if user.is_authenticated %}
+                            <ul class="">
+                                <li><a href="{% url 'blog:personajes' %}">Lista de Personajes</a></li>
+                                <li><a href="{% url 'blog:tierlist' %}">Tier List</a></li>
+                                <li><a href="Glosario.html">Glosario</a></li>
+                                <li><a href="{% url 'blog:signup' %}">REGÍSTRATE</a></li>
+                                <li><a href="{% url 'blog:login' %}">INICIAR SESION</a></li>
+                
+                
+                
+                            </ul>
+                            {% else %}
+                            <ul class="">
+                                <li><a href="{% url 'blog:personajes' %}">Lista de Personajes</a></li>
+                                <li><a href="{% url 'blog:tierlist' %}">Tier List</a></li>
+                                <li><a href="Glosario.html">Glosario</a></li>
+                                <li><a href="{% url 'blog:signup' %}">REGÍSTRATE</a></li>
+                                <li><a href="userPj.html">Tus Personajes</a></li>
+                
+                
+                            </ul>
+                            {% endif %}
+                    </nav>
+                    <div class="social-bar">
+                        <a href="https://discord.gg/yKGC4zD" class="fab fa-discord" target="_blank"></a>
+                        <a href="https://mail.google.com/mail/u/0/?tab=im#inbox?compose=DmwnWstqxHDbTxRcgMKbsdhlPkXltWxtxTTQgHqVRccSFZMzTGwzqhVkfkXQGqDNfjTfqWtwghmL" class="fab fa-google-plus-g" target="_blank"></a>
+                        <a href="https://www.twitter.com/" class="fab fa-twitter" target="_blank"></a>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+    {% block content %} {% endblock %}
+    <footer>
+        <div id="footer-d" class="row start-lg middle-lg center-xs">
+            <ul class="Pie">
+                    <h2>Contacto</h2>
+
+>>>>>>> master
                 <li><span class="icon fa-envelope"></span> <a href="#">hans.arancibia@live.com</a></li>
             </ul>
         </div>

@@ -6,10 +6,20 @@ from django.views.static import serve
 from django.conf.urls.static import static
 from django.urls import path
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 urlpatterns = [
     url('admin/', admin.site.urls),
     url('', include('blog.urls')),
     url(r'personajes/', include('personajes.urls')),
+<<<<<<< HEAD
     url(r'cuentas/', include('accounts.urls')),
+=======
+    url(r'accounts/', include('accounts.urls')),
+
+
+>>>>>>> master
 
 ]

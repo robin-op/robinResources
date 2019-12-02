@@ -43,7 +43,41 @@ a:visited {
     /* color: #bf2000; */
     text-decoration: none;
 }
+<<<<<<< HEAD:blog/static/css/style.css
 
+=======
+.tabletitle {
+font-size: 20px;
+background-image: url('Imagenes/chartierstablebg.png');
+padding-top: 5px;
+padding-left: 15px;
+padding-bottom: 13px;
+background-size: contain;
+border-left: 1px solid lightgray;
+border-right: 1px solid lightgray;
+border-top: 1px solid lightgray;
+box-shadow: 1px 1px 1px lightgray;
+}
+table {
+    margin:0;
+    padding:0
+   }
+.tierA {
+ min-height:200px;
+ height:100%;
+ margin-top:10px;
+ background-image: url('https://media.eventhubs.com/static/images/tiers_holder_bg.png');
+ position:relative;
+}
+
+.tierA ol{
+padding-right:15px;
+}
+
+.tierA ol li{
+padding-bottom:3px;       
+}
+>>>>>>> master:css/style.css
 a:hover {
     color: #f22800;
     text-decoration: none;
@@ -249,7 +283,10 @@ table {
     border-top: 0px;
     padding: 1.1em 1em;
 }
+<<<<<<< HEAD:blog/static/css/style.css
 
+=======
+>>>>>>> master:css/style.css
 .moves,
 .ListaPersonajes {
     max-width: 1280px;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD:personajes/templates/personajes/Inkling.html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,11 +33,21 @@
         </nav>
     </div>
 
+=======
+{% extends 'personajes/base.html' %} {% load staticfiles %} {% block content %}
+
+<body>
+    <h1 class="NombrePersonaje">Inkling</h1>
+>>>>>>> master:Personajes/Inkling.html
 
     <a href="#0" class="cd-nav-trigger">Menu<span></span></a>
 
 
+<<<<<<< HEAD:personajes/templates/personajes/Inkling.html
     <img class="Portrait" alt="ImagenPersonaje" src="imgPj\link.jpg">
+=======
+    <img class="Portrait" alt="ImagenPersonaje" src="{% static 'imgPj/inkling.jpg' %}">
+>>>>>>> master:Personajes/Inkling.html
     <div class="Contenedor">
         <h2 class="Categoria" id="Neutral">Jabs</h2>
         <div class="moves">
@@ -405,4 +416,8 @@
     </div>
 </body>
 
+<<<<<<< HEAD:personajes/templates/personajes/Inkling.html
 </html>
+=======
+</html>{% endblock %}
+>>>>>>> master:Personajes/Inkling.html

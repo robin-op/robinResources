@@ -1,3 +1,4 @@
+<<<<<<< HEAD:personajes/templates/personajes/Roy.html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,12 +32,23 @@
             </ul>
         </nav>
     </div>
+=======
+{% extends 'personajes/base.html' %} {% load staticfiles %} {% block content %}
+
+<body>
+    <h1 class="NombrePersonaje">Roy</h1>
+
+>>>>>>> master:Personajes/Roy.html
 
 
     <a href="#0" class="cd-nav-trigger">Menu<span></span></a>
 
 
+<<<<<<< HEAD:personajes/templates/personajes/Roy.html
     <img class="Portrait" alt="ImagenPersonaje" src="imgPj/roy.jpg">
+=======
+    <img class="Portrait" alt="ImagenPersonaje" src="{% static 'imgPj/roy.jpg' %}">
+>>>>>>> master:Personajes/Roy.html
     <div class="Contenedor">
         <h2 class="Categoria" id="Neutral">Jabs</h2>
         <div class="moves">
@@ -405,4 +417,9 @@
     </div>
 </body>
 
+<<<<<<< HEAD:personajes/templates/personajes/Roy.html
 </html>
+=======
+</html>
+{% endblock %}
+>>>>>>> master:Personajes/Roy.html

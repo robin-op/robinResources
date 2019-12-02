@@ -2,18 +2,77 @@ from django.shortcuts import render
 from django.utils import timezone
 from django.views import generic
 from .models import Post
+<<<<<<< HEAD
 from django.shortcuts import render, get_object_or_404
 from .forms import PostForm
 from django.shortcuts import redirect
 
 
 # Create your views here.
+=======
+from django.shortcuts import render, get_object_or_404,HttpResponseRedirect
+from .forms import PostForm
+from django.contrib.auth import login, authenticate,logout
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.shortcuts import render, redirect
+from .forms import SignUpForm
+from django.contrib import messages
+
+
+
+
+# Create your views here.
+def login_view(request):
+    if request.method == 'POST':
+        form = AuthenticationForm(data=request.POST)
+        if form.is_valid():
+            #log in the user
+            user = form.get_user()
+            login(request,user)
+            if 'next' in request.POST:
+                return redirect(request.POST.get('next'))
+            else:
+                return redirect('')
+    else:
+        form = AuthenticationForm()
+
+    return render(request, 'blog/login.html',{'form':form })
+
+def logout_view(request):
+    logout(request)
+    return HttpResponseRedirect("/blog/login/")
+
+def signup(request):
+    if request.method == 'POST':
+        form = SignUpForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            user.refresh_from_db()  # load the profile instance created by the signal
+            user.profile.birth_date = form.cleaned_data.get('birth_date')
+            user.save()
+            raw_password = form.cleaned_data.get('password1')
+            user = authenticate(username=user.username, password=raw_password)
+            login(request, user)
+            return redirect('')
+    else:
+        form = SignUpForm()
+    return render(request, 'blog/signup.html', {'form': form})
+
+
+
+
+>>>>>>> master
 def main(request):
     return render(request, 'blog/Index.html')
 def listaPersonajes (request):
     return render(request, 'blog/ListaPersonajes.html')
+<<<<<<< HEAD
 def signup (request):
     return render(request, 'blog/signup.html')
+=======
+def tierlist (request):
+        return render(request, 'blog/tiers.html')
+>>>>>>> master
 
 def post_list(request):
     user = request.user

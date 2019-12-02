@@ -1,3 +1,4 @@
+<<<<<<< HEAD:personajes/templates/personajes/Joker.html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,11 +33,22 @@
         </nav>
     </div>
 
+=======
+{% extends 'personajes/base.html' %} {% load staticfiles %} {% block content %}
+
+
+<body>
+    <h1 class="NombrePersonaje">Joker</h1>
+>>>>>>> master:Personajes/Joker.html
 
     <a href="#0" class="cd-nav-trigger">Menu<span></span></a>
 
 
+<<<<<<< HEAD:personajes/templates/personajes/Joker.html
     <img class="Portrait" alt="ImagenPersonaje" src="imgPj/joker.jpg">
+=======
+    <img class="Portrait" alt="ImagenPersonaje" src="{% static 'imgPj/joker.jpg' %}">
+>>>>>>> master:Personajes/Joker.html
     <div class="Contenedor">
         <h2 class="Categoria" id="Neutral">Normales</h2>
         <div class="moves">
@@ -405,4 +417,8 @@
     </div>
 </body>
 
+<<<<<<< HEAD:personajes/templates/personajes/Joker.html
 </html>
+=======
+</html>{% endblock %}
+>>>>>>> master:Personajes/Joker.html
