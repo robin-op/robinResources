@@ -14,7 +14,7 @@ from django.contrib import messages
 
 
 # Create your views here.
-def login_view(request):
+def login(request):
     if request.method == 'POST':
         form = AuthenticationForm(data=request.POST)
         if form.is_valid():
@@ -24,7 +24,7 @@ def login_view(request):
             if 'next' in request.POST:
                 return redirect(request.POST.get('next'))
             else:
-                return redirect('')
+                return redirect('blog/home.html')
     else:
         form = AuthenticationForm()
 
@@ -40,7 +40,6 @@ def signup(request):
         if form.is_valid():
             user = form.save()
             user.refresh_from_db()  # load the profile instance created by the signal
-            user.profile.birth_date = form.cleaned_data.get('birth_date')
             user.save()
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=user.username, password=raw_password)
@@ -69,7 +68,7 @@ def post_list(request):
         return render(request, 'blog/home.html')
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
-    return render(request, 'blog/post_detail.html', {'post': post})
+    return render(request, 'blog/post_detail.html', {'post': posts})
 
 def post_new(request):
     if request.method == "POST":

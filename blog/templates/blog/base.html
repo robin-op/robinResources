@@ -22,28 +22,38 @@
                 <div id="cd-nav" class="">
                     <a href="#0" class="cd-nav-trigger">Menu<span></span></a>
                     <nav id="cd-main-nav">
-                            {% if user.is_authenticated %}
-                            <ul class="">
-                                <li><a href="{% url 'blog:personajes' %}">Lista de Personajes</a></li>
-                                <li><a href="{% url 'blog:tierlist' %}">Tier List</a></li>
-                                <li><a href="Glosario.html">Glosario</a></li>
-                                <li><a href="{% url 'blog:signup' %}">REGÍSTRATE</a></li>
-                                <li><a href="{% url 'blog:login' %}">INICIAR SESION</a></li>
-                
-                
-                
+                        {% if user.is_authenticated %}
+                        <ul class="">
+                            <li><a href="{% url 'blog:personajes' %}">Lista de Personajes</a></li>
+                            <li><a href="{% url 'blog:tierlist' %}">Tier List</a></li>
+                            <li><a href="Glosario.html">Glosario</a></li>
+                            <li><a href="{% url 'blog:signup' %}">REGÍSTRATE</a></li>
+                            <ul class="actions vertical">
+                                <li>
+                                    <form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
+                                        Bienvenido : {{ request.user }} {% csrf_token %}
+                                        <br>
+                                        <br>
+                                        <button class="salir" type="submit">Cerrar Sesion</button>
+                                    </form>
+
+                                </li>
                             </ul>
-                            {% else %}
-                            <ul class="">
-                                <li><a href="{% url 'blog:personajes' %}">Lista de Personajes</a></li>
-                                <li><a href="{% url 'blog:tierlist' %}">Tier List</a></li>
-                                <li><a href="Glosario.html">Glosario</a></li>
-                                <li><a href="{% url 'blog:signup' %}">REGÍSTRATE</a></li>
-                                <li><a href="userPj.html">Tus Personajes</a></li>
-                
-                
-                            </ul>
-                            {% endif %}
+
+
+
+                        </ul>
+                        {% else %}
+                        <ul class="">
+                            <li><a href="{% url 'blog:personajes' %}">Lista de Personajes</a></li>
+                            <li><a href="{% url 'blog:tierlist' %}">Tier List</a></li>
+                            <li><a href="Glosario.html">Glosario</a></li>
+                            <li><a href="{% url 'blog:signup' %}">REGÍSTRATE</a></li>
+                            <li><a href="{% url 'blog:login' %}">INICIAR SESION</a></li>
+
+
+                        </ul>
+                        {% endif %}
                     </nav>
                     <div class="social-bar">
                         <a href="https://discord.gg/yKGC4zD" class="fab fa-discord" target="_blank"></a>
@@ -51,7 +61,7 @@
                         <a href="https://www.twitter.com/" class="fab fa-twitter" target="_blank"></a>
                     </div>
                 </div>
-               
+
             </div>
         </div>
     </div>
@@ -59,7 +69,7 @@
     <footer>
         <div id="footer-d" class="row start-lg middle-lg center-xs">
             <ul class="Pie">
-                    <h2>Contacto</h2>
+                <h2>Contacto</h2>
 
                 <li><span class="icon fa-envelope"></span> <a href="#">hans.arancibia@live.com</a></li>
             </ul>

@@ -159,48 +159,293 @@ table {
     text-decoration: none;
 }
 
+.Cajapersonaje.Bayonetta {
+    background-image: url("imgPj/bayonetta.jpg");
+    background-position: center 15%;
+}
+
+.Cajapersonaje.Bowser {
+    background-image: url("imgPj/bowser.jpg");
+    background-position: center 15%;
+}
+
+.Cajapersonaje.Daisy {
+    background-image: url("imgPj/daisy.jpg");
+    background-position: center 15%;
+}
+
+.Cajapersonaje.Dark_samus {
+    background-image: url("imgPj/dark_samus.jpg");
+    background-position: center 15%;
+}
+
+.Cajapersonaje.Diddy_kong {
+    background-image: url("imgPj/diddy_kong.jpg");
+    background-position: center 15%;
+}
+
+.Cajapersonaje.Donkey_kong {
+    background-image: url("imgPj/donkey_kong.jpg");
+    background-position: center 15%;
+}
+
+.Cajapersonaje.Dr_mario {
+    background-image: url("imgPj/dr_mario.jpg");
+    background-position: center 15%;
+}
+
+.Cajapersonaje.Duck_hunt {
+    background-image: url("imgPj/duck_hunt.jpg");
+    background-position: center 15%;
+}
+
+.Cajapersonaje.falco {
+    background-image: url("imgPj/falco.jpg");
+    background-position: center 15%;
+}
+
+.Cajapersonaje.hero {
+    background-image: url("imgPj/hero.jpg");
+    background-position: center 15%;
+}
+
+.Cajapersonaje.fox {
+    background-image: url("imgPj/fox.jpg");
+    background-position: center 15%;
+}
+
+.Cajapersonaje.ganondorf {
+    background-image: url("imgPj/ganondorf.jpg");
+    background-position: center 15%;
+}
+
+.Cajapersonaje.greninja {
+    background-image: url("imgPj/greninja.jpg");
+    background-position: center 15%;
+}
+
+.Cajapersonaje.ice_climbers {
+    background-image: url("imgPj/ice_climbers.jpg");
+    background-position: center 15%;
+}
+
+.Cajapersonaje.incineroar {
+    background-image: url("imgPj/incineroar.jpg");
+    background-position: center 15%;
+}
+
+.Cajapersonaje.isabelle {
+    background-image: url("imgPj/isabelle.jpg");
+    background-position: center 15%;
+}
+
+.Cajapersonaje.jigglypuff {
+    background-image: url("imgPj/jigglypuff.jpg");
+    background-position: center 15%;
+}
+
+.Cajapersonaje.ken {
+    background-image: url("imgPj/ken.jpg");
+    background-position: center 15%;
+}
+
+.Cajapersonaje.king_dedede {
+    background-image: url("imgPj/king_dedede.jpg");
+    background-position: center 15%;
+}
+
+.Cajapersonaje.king_k_rool {
+    background-image: url("imgPj/king_k_rool.jpg");
+    background-position: center 15%;
+}
+
+.Cajapersonaje.kirby {
+    background-image: url("imgPj/kirby.jpg");
+    background-position: center 15%;
+}
+
+.Cajapersonaje.little_mac {
+    background-image: url("imgPj/little_mac.jpg");
+    background-position: center 15%;
+}
+
+.Cajapersonaje.lucario {
+    background-image: url("imgPj/lucario.jpg");
+    background-position: center 15%;
+}
+
+.Cajapersonaje.lucas {
+    background-image: url("imgPj/lucas.jpg");
+    background-position: center 15%;
+}
+
+.Cajapersonaje.luigi {
+    background-image: url("imgPj/luigi.jpg");
+    background-position: center 15%;
+}
+
+.Cajapersonaje.mario {
+    background-image: url("imgPj/mario.jpg");
+    background-position: center 15%;
+}
+
 .Cajapersonaje.Pulpo {
     background-image: url("imgPj/inkling.jpg");
     background-position: center 15%;
 }
 
-.Cajapersonaje.Cloud {
-    background-image: url("imgPj/cloud.jpg");
+.Cajapersonaje.mega_man {
+    background-image: url("imgPj/mega_man.jpg");
+    background-position: center 15%;
+}
+
+.Cajapersonaje.meta_knight {
+    background-image: url("imgPj/meta_knight.jpg");
+    background-position: center 15%;
+}
+
+v .Cajapersonaje.mewtwo {
+    background-image: url("imgPj/mewtwo.jpg");
+    background-position: center 15%;
+}
+
+.Cajapersonaje.mr_game_and_watch {
+    background-image: url("imgPj/mr_game_and_watch.jpg");
+    background-position: center 15%;
+}
+
+.Cajapersonaje.ness {
+    background-image: url("imgPj/ness.jpg");
+    background-position: center 15%;
+}
+
+.Cajapersonaje.pac_man {
+    background-image: url("imgPj/pac_man.jpg");
+    background-position: center 15%;
+}
+
+.Cajapersonaje.palutena {
+    background-image: url("imgPj/palutena.jpg");
+    background-position: center 15%;
+}
+
+.Cajapersonaje.peach {
+    background-image: url("imgPj/peach.jpg");
+    background-position: center 15%;
+}
+
+.Cajapersonaje.pichu {
+    background-image: url("imgPj/pichu.jpg");
+    background-position: center 15%;
+}
+
+.Cajapersonaje.pikachu {
+    background-image: url("imgPj/pikachu.jpg");
+    background-position: center 15%;
+}
+
+.Cajapersonaje.piranha_plant {
+    background-image: url("imgPj/piranha_plant.jpg");
+    background-position: center 15%;
+}
+
+.Cajapersonaje.pt_charizard {
+    background-image: url("imgPj/pt_charizard.jpg");
+    background-position: center 15%;
+}
+
+.Cajapersonaje.pt_ivysaur {
+    background-image: url("imgPj/pt_ivysaur.jpg");
+    background-position: center 15%;
+}
+
+.Cajapersonaje.pt_squirtle {
+    background-image: url("imgPj/pt_squirtle.jpg");
+    background-position: center 15%;
+}
+
+.Cajapersonaje.richter {
+    background-image: url("imgPj/richter.jpg");
+    background-position: center 15%;
+}
+
+.Cajapersonaje.ridley {
+    background-image: url("imgPj/ridley.jpg");
+    background-position: center 15%;
+}
+
+.Cajapersonaje.ryu {
+    background-image: url("imgPj/ryu.jpg");
+    background-position: center 15%;
+}
+
+.Cajapersonaje.samus {
+    background-image: url("imgPj/samus.jpg");
+    background-position: center 15%;
+}
+
+.Cajapersonaje.simon {
+    background-image: url("imgPj/simon.jpg");
+    background-position: center 15%;
+}
+
+.Cajapersonaje.snake {
+    background-image: url("imgPj/snake.jpg");
+    background-position: center 15%;
+}
+
+.Cajapersonaje.sonic {
+    background-image: url("imgPj/sonic.jpg");
+    background-position: center 15%;
+}
+
+.Cajapersonaje.terry {
+    background-image: url("imgPj/terry.jpg");
+    background-position: center 15%;
+}
+
+.Cajapersonaje.wolf {
+    background-image: url("imgPj/wolf.jpg");
+    background-position: center 15%;
+}
+
+.Cajapersonaje.young_link {
+    background-image: url("imgPj/young_link.jpg");
     background-position: center 15%;
 }
 
 .Cajapersonaje.Cloud {
-    background-image: url("imgPj/cloud.jpg");
+    background-image: url("imgPj/cloud (1).jpg");
     background-position: center 15%;
 }
 
 .Cajapersonaje.Joker {
-    background-image: url("imgPj/joker.jpg");
+    background-image: url("imgPj/joker (1).jpg");
     background-position: center 15%;
 }
 
 .Cajapersonaje.Corrin {
-    background-image: url("imgPj/corrin.jpg");
+    background-image: url("imgPj/corrin (1).jpg");
     background-position: center 15%;
 }
 
 .Cajapersonaje.Ike {
-    background-image: url("imgPj/ike.jpg");
+    background-image: url("imgPj/ike (1).jpg");
     background-position: center 15%;
 }
 
 .Cajapersonaje.Link {
-    background-image: url("imgPj/link.jpg");
+    background-image: url("imgPj/link (1).jpg");
     background-position: center 15%;
 }
 
 .Cajapersonaje.Lucina {
-    background-image: url("imgPj/lucina.jpg");
+    background-image: url("imgPj/lucina (1).jpg");
     background-position: center 15%;
 }
 
 .Cajapersonaje.Marth {
-    background-image: url("imgPj/marth.jpg");
+    background-image: url("imgPj/marth (1).jpg");
     background-position: center 15%;
 }
 
@@ -210,17 +455,17 @@ table {
 }
 
 .Cajapersonaje.Roy {
-    background-image: url("imgPj/roy.jpg");
+    background-image: url("imgPj/roy (1).jpg");
     background-position: center 15%;
 }
 
 .Cajapersonaje.Chrom {
-    background-image: url("imgPj/chrom.jpg");
+    background-image: url("imgPj/chrom (1).jpg");
     background-position: center 15%;
 }
 
 .Cajapersonaje.Robin {
-    background-image: url("imgPj/robin.jpg");
+    background-image: url("imgPj/robin (1).jpg");
     background-position: center 15%;
 }
 
