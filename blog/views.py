@@ -3,18 +3,21 @@ from django.utils import timezone
 from django.views import generic
 from .models import Post
 from django.shortcuts import render, get_object_or_404,HttpResponseRedirect
-from .forms import PostForm
+from .forms import PostForm,PersonajeForm
 from django.contrib.auth import login, authenticate,logout
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.shortcuts import render, redirect
-from .forms import SignUpForm
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import login, authenticate
+
 
 
 
 
 # Create your views here.
-def login(request):
+
+def login_view(request):
     if request.method == 'POST':
         form = AuthenticationForm(data=request.POST)
         if form.is_valid():
@@ -24,11 +27,23 @@ def login(request):
             if 'next' in request.POST:
                 return redirect(request.POST.get('next'))
             else:
-                return redirect('blog/home.html')
+                return redirect('blog:home')
     else:
         form = AuthenticationForm()
 
     return render(request, 'blog/login.html',{'form':form })
+@login_required
+def personajeFavorito(request):
+    data = {
+        'form':PersonajeForm()
+    }
+    
+    if request.method == 'POST':
+        form = PersonajeForm(request.POST, files=request.FILES)
+        if form.is_valid():
+            form.save()
+            data['mensaje'] = "Personaje Agregado Correctamete"
+    return render(request, 'blog/personajeFavorito.html', data)
 
 def logout_view(request):
     logout(request)
@@ -36,7 +51,7 @@ def logout_view(request):
 
 def signup(request):
     if request.method == 'POST':
-        form = SignUpForm(request.POST)
+        form = UserCreationForm(request.POST)
         if form.is_valid():
             user = form.save()
             user.refresh_from_db()  # load the profile instance created by the signal
@@ -46,7 +61,7 @@ def signup(request):
             login(request, user)
             return redirect('')
     else:
-        form = SignUpForm()
+        form = UserCreationForm()
     return render(request, 'blog/signup.html', {'form': form})
 
 

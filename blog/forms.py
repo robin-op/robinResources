@@ -1,8 +1,12 @@
 from django import forms
-from .models import Post
+from .models import Post,Personaje
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+from django.forms import ModelForm
+
+
+
 
 
 class PostForm(forms.ModelForm):
@@ -11,11 +15,12 @@ class PostForm(forms.ModelForm):
         model = Post
         fields = ('title', 'text',)
 
-class SignUpForm(UserCreationForm):
-    first_name = forms.CharField(max_length=30, required=False, help_text='Optional.')
-    last_name = forms.CharField(max_length=30, required=False, help_text='Optional.')
-    email = forms.EmailField(max_length=254, help_text='')
+class PersonajeForm(ModelForm):
+    
+    class Meta:
+        model = Personaje
+        fields = ['nombre','foto']
+class CustomUserForm(UserCreationForm):    
     class Meta:
         model = User
-        fields = ('username', 'first_name', 'last_name', 'email', 'password1', 'password2', )
-
+        fields= ['first_name','last_name','email','username','password1','password2']

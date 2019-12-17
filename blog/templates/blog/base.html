@@ -23,15 +23,16 @@
                     <a href="#0" class="cd-nav-trigger">Menu<span></span></a>
                     <nav id="cd-main-nav">
                         {% if user.is_authenticated %}
+                        <a href="{% url 'blog:post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
                         <ul class="">
                             <li><a href="{% url 'blog:personajes' %}">Lista de Personajes</a></li>
                             <li><a href="{% url 'blog:tierlist' %}">Tier List</a></li>
-                            <li><a href="Glosario.html">Glosario</a></li>
-                            <li><a href="{% url 'blog:signup' %}">REGÍSTRATE</a></li>
+                            <li><a href="{% url 'blog:personajeFavorito' %}">Agregar Personaje Favorito</a></li>
+
                             <ul class="actions vertical">
                                 <li>
                                     <form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
-                                        Bienvenido : {{ request.user }} {% csrf_token %}
+                                        Bienvenido : {{ request.user }}
                                         <br>
                                         <br>
                                         <button class="salir" type="submit">Cerrar Sesion</button>
@@ -47,7 +48,6 @@
                         <ul class="">
                             <li><a href="{% url 'blog:personajes' %}">Lista de Personajes</a></li>
                             <li><a href="{% url 'blog:tierlist' %}">Tier List</a></li>
-                            <li><a href="Glosario.html">Glosario</a></li>
                             <li><a href="{% url 'blog:signup' %}">REGÍSTRATE</a></li>
                             <li><a href="{% url 'blog:login' %}">INICIAR SESION</a></li>
 

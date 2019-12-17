@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig' ,
     'accounts.apps.AccountsConfig',
     'personajes.apps.PersonajesConfig',
-    'rest_framework',
+    'rest_framework','crispy_forms',
+
 
 ]
 REST_FRAMEWORK = {
